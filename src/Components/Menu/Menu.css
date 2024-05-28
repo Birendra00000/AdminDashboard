@@ -1,0 +1,31 @@
+.main--menu--wrapper {
+  .menu--container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .wrap--menu {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(243, 236, 236, 0.631);
+    text-transform: uppercase;
+  }
+  .menu--list--items {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 6px;
+    padding: 8px 6px;
+
+    &:hover {
+      background-color: rgba(92, 84, 84, 0.748);
+    }
+  }
+
+  .span--title {
+    color: white;
+  }
+}

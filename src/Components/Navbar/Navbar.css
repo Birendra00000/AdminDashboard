@@ -1,0 +1,51 @@
+.main--navbar--one {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+
+  .nav--container--two {
+    width: 50px;
+  }
+
+  .right-wrapper--three {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .right-wrapper--three img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .notification--wrap--four {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+  }
+
+  .notification--container--five {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -17px;
+    right: -25px;
+  }
+  .user--wrap--six {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .name--wrap--seven {
+    font-size: large;
+    font-weight: bold;
+  }
+}

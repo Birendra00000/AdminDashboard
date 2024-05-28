@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Coming+Soon&family=Inter&family=Open+Sans:ital@1&family=Poppins:ital,wght@0,400;1,300;1,400&family=Roboto+Mono:ital,wght@0,400;1,300&family=Roboto+Serif:opsz@8..144&family=Roboto:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main--navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10px;
+}
+.main {
+  background-color: rgba(0, 0, 0, 0.805);
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+.main--container {
+  display: flex;
+}
+.menu--wrapper {
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid rgba(255, 255, 255, 0.142);
+}
+.page--wrapper {
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.right-wrapper {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  align-items: center;
+  margin-right: 10px;
+}
+.user--wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user--icon {
+  border-radius: 50%;
+}
+.notification--wrap {
+  position: relative;
+}
+.notification--container {
+  position: absolute;
+  top: -15px;
+  right: -13px;
+  background-color: red;
+  border-radius: 50%;
+  width: 21px;
+  display: flex;
+  height: 21px;
+  justify-content: center;
+  align-items: center;
+}

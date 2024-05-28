@@ -1,0 +1,28 @@
+.container--box {
+  .box--title {
+    margin-bottom: 20px;
+  }
+}
+.wrap--all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.users--wrap img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.wrap--container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.user--name {
+  font-size: 14px;
+}
+.amount--wrap {
+  font-weight: bold;
+}
