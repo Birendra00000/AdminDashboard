@@ -1,7 +1,7 @@
 import "./Home.css";
 import FirstBox from "../../Components/firstBox/firstBox";
 import ChartBox from "../../Components/ChartBox/ChartBox";
-import { chartBoxUser } from "../../Components/Navbar/data";
+import { chartBoxProduct, chartBoxUser } from "../../../data";
 const HomePage = () => {
   return (
     <div className="main--home--container">
@@ -10,16 +10,19 @@ const HomePage = () => {
       </div>
       <div className=" grid-container wrap--box--2">
         <ChartBox
-          icon={chartBoxUser.icon}
-          title={chartBoxUser.title}
-          number={chartBoxUser.number}
-          chartData={chartBoxUser.chartData}
-          dataKey={chartBoxUser.dataKey}
-          color={chartBoxUser.color}
-          percentage={chartBoxUser.percentage}
+          // icon={chartBoxUser.icon}
+          // title={chartBoxUser.title}
+          // number={chartBoxUser.number}
+          // chartData={chartBoxUser.chartData}
+          // dataKey={chartBoxUser.dataKey}
+          // color={chartBoxUser.color}
+          // percentage={chartBoxUser.percentage}
+          {...chartBoxUser}
         />
       </div>
-      <div className="grid-container wrap--box--3">Box</div>
+      <div className="grid-container wrap--box--3">
+        <ChartBox {...chartBoxProduct} />
+      </div>
       <div className="grid-container wrap--box--4">Box4</div>
       <div className="grid-container wrap--box--5">Box</div>
       <div className="grid-container wrap--box--6">Box</div>

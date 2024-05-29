@@ -1,6 +1,6 @@
 import React from "react";
-import { topDealUsers } from "../Navbar/data";
 import "./firstBox.css";
+import { topDealUsers } from "../../../data";
 const FirstBox = () => {
   return (
     <div className="container--box">

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css";
-import { Menu } from "../Navbar/data";
+import { menu } from "../../../data";
 const MenuBar = () => {
   return (
     <>
-      {Menu.map((items) => (
+      {menu.map((items) => (
         <div className="main--menu--wrapper">
           <div className="menu--container" key={items.id}>
             <span className="wrap--menu">{items.title}</span>
