@@ -1,7 +1,17 @@
 import "./Home.css";
 import FirstBox from "../../Components/firstBox/firstBox";
 import ChartBox from "../../Components/ChartBox/ChartBox";
-import { chartBoxProduct, chartBoxUser } from "../../../data";
+import {
+  barChartBoxRevenue,
+  barChartBoxVisit,
+  chartBoxConversion,
+  chartBoxProduct,
+  chartBoxRevenue,
+  chartBoxUser,
+} from "../../../data";
+import BarChartBox from "../../Components/BarChartBox/BarChartBox";
+import PieChartBox from "../../Components/PieChartBox/PieChartBox";
+import StackedAreaChart from "../../Components/StackedAreaChart/StackedAreaChart";
 const HomePage = () => {
   return (
     <div className="main--home--container">
@@ -23,12 +33,25 @@ const HomePage = () => {
       <div className="grid-container wrap--box--3">
         <ChartBox {...chartBoxProduct} />
       </div>
-      <div className="grid-container wrap--box--4">Box4</div>
-      <div className="grid-container wrap--box--5">Box</div>
-      <div className="grid-container wrap--box--6">Box</div>
-      <div className="grid-container wrap--box--7">Box7</div>
-      <div className="grid-container wrap--box--8">Box</div>
-      <div className="grid-container wrap--box--9">Box</div>
+      <div className="grid-container wrap--box--4">
+        <PieChartBox />
+      </div>
+      <div className="grid-container wrap--box--5">
+        <ChartBox {...chartBoxRevenue} />
+      </div>
+      <div className="grid-container wrap--box--6">
+        <ChartBox {...chartBoxConversion} />
+      </div>
+      <div className="grid-container wrap--box--7">
+        <StackedAreaChart />
+      </div>
+      <div className="grid-container wrap--box--8">
+        {" "}
+        <BarChartBox {...barChartBoxRevenue} />
+      </div>
+      <div className="grid-container wrap--box--9">
+        <BarChartBox {...barChartBoxVisit} />
+      </div>
     </div>
   );
 };

@@ -208,7 +208,7 @@ export const chartBoxRevenue = {
   title: "Total Revenue",
   number: "$56.432",
   dataKey: "revenue",
-  percentage: -12,
+  percentage: -18,
   chartData: [
     { name: "Sun", revenue: 400 },
     { name: "Mon", revenue: 600 },
