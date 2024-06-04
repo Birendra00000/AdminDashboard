@@ -1,9 +1,24 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import "./User.css";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
+  {
+    field: "avatar",
+    headerName: "Avatar",
+    width: 100,
+    renderCell: (params) => {
+      return <img src={params.row.img || " /noavatar.png"} />;
+    },
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    width: 100,
+    type: "boolean",
+  },
   {
     field: "firstName",
     headerName: "First name",
@@ -34,14 +49,20 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1, lastName: "Snow", firstName: "Jon", age: 14 },
-  { id: 2, lastName: "Lannister", firstName: "Cersei", age: 31 },
+  { id: 1, lastName: "Snow", firstName: "Jon", age: 14, status: true },
+  { id: 2, lastName: "Lannister", firstName: "Cersei", age: 31, status: false },
   { id: 3, lastName: "Lannister", firstName: "Jaime", age: 31 },
   { id: 4, lastName: "Stark", firstName: "Arya", age: 11 },
-  { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-  { id: 6, lastName: "Melisandre", firstName: null, age: 150 },
+  {
+    id: 5,
+    lastName: "Targaryen",
+    firstName: "Daenerys",
+    age: null,
+    status: true,
+  },
+  { id: 6, lastName: "Melisandre", firstName: null, age: 150, status: true },
   { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-  { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
+  { id: 8, lastName: "Frances", firstName: "Rossini", age: 36, status: true },
   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
 ];
 
@@ -49,14 +70,14 @@ const Users = () => {
   return (
     <>
       {" "}
-      <Box sx={{ height: 400, width: "100%", backgroundColor: "white" }}>
+      <Box sx={{ height: 700, width: "100%", backgroundColor: "white" }}>
         <DataGrid
           rows={rows}
           columns={columns}
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 5,
+                pageSize: 10,
               },
             },
           }}
@@ -67,7 +88,7 @@ const Users = () => {
               quickFilterProps: { debounceMs: 500 },
             },
           }}
-          pageSizeOptions={[5]}
+          pageSizeOptions={[10]}
           checkboxSelection
           disableRowSelectionOnClick
           disableColumnFilter
