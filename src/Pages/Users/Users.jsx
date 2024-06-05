@@ -2,6 +2,9 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import "./User.css";
+import { Link } from "react-router-dom";
+import { GrView } from "react-icons/gr";
+import { FaRegTrashAlt } from "react-icons/fa";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -45,6 +48,23 @@ const columns = [
     sortable: false,
     width: 160,
     valueGetter: (value, row) => `${row.firstName || ""} ${row.lastName || ""}`,
+  },
+  {
+    field: "action",
+    headerName: "Action",
+    width: 200,
+    renderCell: (params) => {
+      return (
+        <div className="action">
+          <Link>
+            <GrView size={20} />
+          </Link>
+          <div>
+            <FaRegTrashAlt size={20} />
+          </div>
+        </div>
+      );
+    },
   },
 ];
 
