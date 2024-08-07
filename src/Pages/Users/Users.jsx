@@ -94,6 +94,7 @@ const Users = () => {
         <DataGrid
           rows={rows}
           columns={columns}
+          slug="user"
           initialState={{
             pagination: {
               paginationModel: {
